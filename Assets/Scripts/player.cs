@@ -30,6 +30,8 @@ public class player : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, horisontaalinenPyorinta, 0);
         nopeus = transform.rotation * nopeus;
 
+        nopeus.y -= painovoima;
+
         //komento, jolla lopulta liikutaan
         hahmokontrolleri.Move(nopeus * Time.deltaTime);
 
