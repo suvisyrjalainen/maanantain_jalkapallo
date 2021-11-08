@@ -44,11 +44,18 @@ public class ball : MonoBehaviour
     {
         Vector3 aloituspaikka = new Vector3(0, 0, 0);
 
-        if (other.gameObject.tag == "maali1")
+        if (other.gameObject.tag == "maali 1")
         {
             print("Ykköset saivat maalin");
             Joukkue1_pisteet += 1;
             pisteet_1 = "Joukkue 1 Pisteet: " + Joukkue1_pisteet;
+        }
+
+        if (other.gameObject.tag == "maali 2")
+        {
+            print("Kakkoset saivat maalin");
+            Joukkue2_pisteet += 1;
+            pisteet_2 = "Joukkue 2 Pisteet: " + Joukkue2_pisteet;
         }
 
         transform.position = aloituspaikka;
